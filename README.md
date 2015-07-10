@@ -6,10 +6,10 @@ Clone the repo:
 `git clone https://github.com/ycp217/chimehack.git`
 
 You got to install flask to run this.
-
-`pip install Flask`
-
-`pip install sendgrid`
+```
+pip install Flask
+pip install sendgrid
+```
 
 Run this by:
 `python app.py`

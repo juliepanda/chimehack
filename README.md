@@ -7,6 +7,7 @@ Clone the repo:
 
 You got to install flask to run this.
 `pip install Flask`
+`pip install sendgrid`
 
 Run this by:
 `python app.py`

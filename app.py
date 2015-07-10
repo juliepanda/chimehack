@@ -1,4 +1,6 @@
 from flask import Flask, render_template
+import mail.py
+
 app = Flask(__name__)
 
 @app.route('/')

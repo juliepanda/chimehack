@@ -11,3 +11,12 @@ You got to install flask to run this.
 
 Run this by:
 `python app.py`
+
+Make your own `secrets.py`:
+```
+def get_api_username():
+  return YOUR_SENDGRID_USERNAME
+
+def get_api_password():
+  return YOUR_SENDGRID_PASSWORD
+```

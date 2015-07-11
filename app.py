@@ -11,6 +11,7 @@ def index():
         subject = 'this is from flask'
         content = 'i got here yay!'
         result = mail.send(to_email_address, from_email_address, subject, content)
+        print str(result)
         return to_email_address
     if request.method == "GET":
         return render_template('index.html')

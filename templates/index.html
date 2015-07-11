@@ -3,8 +3,10 @@
   <head>
     <meta charset="UTF-8">
     <title>Chimehack</title>
+    <link rel="stylesheet" href="../static/css/foundation.css" />
+    <link rel="stylesheet" href="../static/css/normalize.css">
     <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
-    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script type="text/javascript" src="{{ url_for('static', filename='main.js') }}"></script>
   </head>
@@ -41,8 +43,12 @@
     </script>
     <div class="row">
       <div class="large-12 columns">
+        <a href="#">
+            <img class="logo" src="../static/img/logo-1.svg">
+        </a> 
+        
         <nav class="clearfix">
-              <ul class="clearfix">
+              <ul class="clearfix content">
                   <li><a href="#">About</a></li> 
                   <li><a href="#">Resources</a></li>
                   <li><a href="#">Contact</a></li>
@@ -62,6 +68,13 @@
         <input type="text" id="email-field" name="email" placeholder="Put the offender's email here" size="80">
         <input type="submit" name="submit" class="button" id="email-submit-btn" value="Submit">
       </fieldset>
+    </div>
+    <div class="section-1-home">
+      <div class="row">
+        <div class="large-8 columns">
+      <p>Croissant lemon drops gingerbread. Biscuit gummies chocolate brownie topping jelly pudding chupa chups lemon drops. Ice cream jelly beans candy jelly beans. Macaroon apple pie gingerbread pudding wafer. Powder marzipan apple pie sesame snaps. Candy macaroon cake jujubes. Sweet chocolate marzipan fruitcake caramels. Cookie chocolate bar candy canes. Lemon drops soufflé toffee muffin cheesecake biscuit gingerbread jujubes macaroon. Marshmallow tiramisu tootsie roll pastry. Jujubes tiramisu cotton candy cake macaroon liquorice. Carrot cake tootsie roll pastry chocolate bar. Brownie cotton candy lollipop bonbon donut icing donut.</p>
+        </div>
+      </div>
     </div>
   </body>
 </html>

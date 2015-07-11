@@ -12,7 +12,7 @@ window.onload = function() {
         /* now send valid email to backend */
         var jsonObj = { 'email': email };
         console.log(jsonObj);
-        var post = $.post('/', jsonObj)
+        var post = $.post('/sendmail', jsonObj)
         .done( function(data) {
           console.log(JSON.stringify(data));
         })

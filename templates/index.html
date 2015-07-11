@@ -1,10 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Chimehack</title>
-</head>
-<body>
-  <h1>ALOHA THERE!!!</h1>
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <title>Chimehack</title>
+  </head>
+  <body>
+    <script type=text/javascript>
+      window.onload = function() {
+        function validateEmail(email) {
+          var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+          return re.test(email);
+        }
+        function getEmail() {
+          var emailBtn = document.getElementById('email-submit-btn');
+          emailBtn.addEventListener('click', function() {
+              var email = document.getElementById('email-field').value;
+              if(validateEmail(email)) {
+                console.log('this is a valid email address');
+              } else {
+                console.log('not a valid email address');
+              }
+              }, false);
+        }
+        getEmail();
+      };
+    </script>
+    <h1>ALOHA THERE!!!</h1>
+    <div id="contant-form">
+      <fieldset>
+        <label for="email">Email: </label>
+        <input type="text" id="email-field" name="email" placeholder="Put the offender's email here" size="80">
+        <input type="submit" name="submit" class="button" id="email-submit-btn" value="Submit">
+      </fieldset>
+    </div>
+  </body>
 </html>

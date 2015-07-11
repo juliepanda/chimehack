@@ -1,19 +1,29 @@
 /* FONTS */
 body {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
 }
 
-.container {
+.content {
   width: 960px;
   margin: 0 auto;
 }
 
+/* NAV */
+.logo {
+  padding-top: 10px;
+  margin-top: 0;
+  z-index: 10;
+  position: relative;
+  float: left;
+  width: 100px;
+}
+
 nav {
-    height: 80px;
+    height: 65px;
     width: 100%;
-    background: #FFF;
     position: relative;
-    border-bottom: 2px solid #eaeaea;
+    border-bottom: 1px solid #eaeaea;
 }
  
 nav ul {
@@ -33,29 +43,38 @@ nav li {
 }
  
 nav a {
-    font-size: 20px;
-    font-weight: 300;
-    color: #8F97A0;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600;
+    color: #f0532d;
     display: inline-block;
     text-align: left;
     text-decoration: none;
 }
  
 nav li a {
-    border-right: 1px solid transparent;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
 }
  
-nav li:last-child a {
-    border-right: 0;
-}
- 
 nav a:hover, nav a:active {
-    color: #94A96F;
+    border-bottom: 2px solid #f0532d;
 }
  
 nav a#pull {
     display: none;
+}
+
+/* SECTIONS */
+
+.section-1-home {
+  background-color: #eaeaea;
+  height: 50%;
+  padding-top: 20px;
+}
+
+.buffer {
+  padding: 20px;
 }

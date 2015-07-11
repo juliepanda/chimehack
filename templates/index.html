@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8">
     <title>Chimehack</title>
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   </head>
   <body>
     <script type=text/javascript>
@@ -17,6 +19,15 @@
               var email = document.getElementById('email-field').value;
               if(validateEmail(email)) {
                 console.log('this is a valid email address');
+                /* now send valid email to backend */
+                var jsonObj = { email: email };
+                var post = $.post('/', JSON.stringify(jsonObj))
+                .done( function(data) {
+                  console.log(JSON.stringify(data));
+                  })
+                .fail( function(err) {
+                  console.log(err);
+                  });
               } else {
                 console.log('not a valid email address');
               }

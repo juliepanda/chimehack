@@ -21,4 +21,10 @@ def get_api_username():
 
 def get_api_password():
   return YOUR_SENDGRID_PASSWORD
+
+def get_nexmo_key():
+    return YOUR_NEXMO_KEY
+
+def get_nexmo_secret():
+    return YOUR_NEXMO_SECRET
 ```

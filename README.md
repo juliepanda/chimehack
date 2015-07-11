@@ -9,6 +9,7 @@ You got to install flask to run this.
 ```
 pip install Flask
 pip install sendgrid
+pip install nexmo
 ```
 
 Run this by:

@@ -6,7 +6,7 @@ app = Flask(__name__)
 @app.route('/', methods=['GET', 'POST'])
 def index():
     if request.method == "POST":
-        data = request.data
+        data = request.form['email']
         return str(data) + ' SUCCESS FROM THE BACKEND'
     if request.method == "GET":
         return render_template('index.html')

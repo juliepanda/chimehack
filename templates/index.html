@@ -20,8 +20,9 @@
               if(validateEmail(email)) {
                 console.log('this is a valid email address');
                 /* now send valid email to backend */
-                var jsonObj = { email: email };
-                var post = $.post('/', JSON.stringify(jsonObj))
+                var jsonObj = { 'email': email };
+                console.log(jsonObj);
+                var post = $.post('/', jsonObj)
                 .done( function(data) {
                   console.log(JSON.stringify(data));
                   })

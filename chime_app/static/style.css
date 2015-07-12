@@ -140,6 +140,10 @@ nav a#pull {
   padding: 20px;
 }
 
+.buffer-sm {
+  padding: 5px;
+}
+
 .no-pad-right {
   padding-right: 0;
 }

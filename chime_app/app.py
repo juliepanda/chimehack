@@ -14,6 +14,8 @@ def send_mail():
     if request.method == "POST":
         to_email_address = request.form['email']
         category = request.form['template']
+        severity = request.form['severity']
+        print severity
         from_email_address = 'julie.yc.pan@gmail.com' # switch out to official email
         # update here to switch templates
         selected_template = which_MailContent_obj(category)
@@ -28,10 +30,13 @@ def send_text():
     if request.method == "POST":
         phone_number_to = request.form['number']
         category = request.form['template']
+        severity = request.form['severity']
         # update here to switch templates
+        print severity
         selected_template = which_TextContent_obj(category)
         content = selected_template.content
         result = text.send(secrets.get_phone_number_from(), phone_number_to, content)
+        # result = 'test'
         return result
 
 def which_MailContent_obj(category):

@@ -13,3 +13,12 @@ template2.content = 'text test content 2'
 
 template3 = TextContent('temp1')
 template3.content = 'text test content 3'
+
+template4 = TextContent('rapeJoke-ouch')
+template4.content = 'mail test content 1'
+
+template5 = TextContent('compSituation-ouch')
+template5.content = 'mail test content 2'
+
+template6 = TextContent('ignoreSign-ouch')
+template6.content = 'mail test content 3'

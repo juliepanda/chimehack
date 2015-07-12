@@ -173,12 +173,12 @@ nav a#pull {
 }
 
 .section-4-instructions {
-  background-color: #f9f8f7;
+  background-color: #efeded;
   padding: 50px 0px;
 }
 
 .section-5-send {
-  background-color: #efeded;
+  background-color: #f9f8f7;
   padding: 50px 0px;
 }
 
@@ -336,6 +336,7 @@ input[type="submit"] {
   font-family: 'Open Sans', sans-serif;
   margin-right:5px;
   color: #f0532d;
+  background: transparent;
 }
 
 .tabs .tab-title.active a{
@@ -347,4 +348,10 @@ input[type="submit"] {
 
 h5 {
   font-family: 'Open Sans', sans-serif;
+}
+
+.alert-box.success {
+  background-color: #3eb871;
+  border-color: transparent;
+  color: #FFFFFF;
 }

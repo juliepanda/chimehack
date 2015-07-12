@@ -18,6 +18,8 @@ window.onload = function() {
         console.log(jsonObj);
         var post = $.post('/sendmail', jsonObj)
         .done( function(data) {
+          var alertBox = document.getElementById('alert-box');
+          alertBox.style.display = 'inline';
           console.log(JSON.stringify(data));
           clearMailForm();
         })
@@ -40,6 +42,8 @@ window.onload = function() {
         console.log(jsonObj);
         var post = $.post('/sendtext', jsonObj)
         .done( function(data) {
+          var alertBox = document.getElementById('alert-box');
+          alertBox.style.display = 'inline';
           console.log(JSON.stringify(data));
           clearTextForm();
         })

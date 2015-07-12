@@ -4,9 +4,9 @@ body {
 }
 
 p {
-  line-height: 34px;
+  line-height: 36px;
   font-size: 18px;
-  color: #333333;
+  color: #625c5a;
 }
 
 h1 {
@@ -18,9 +18,20 @@ h1 {
 }
 
 h3 {
+  font-family: 'Karla', sans-serif;
   font-size: 24px;
   color: #625c5a;
   line-height: 40px;
+}
+
+h4 {
+  font-family: 'Karla', sans-serif;
+  color: #f49921;
+}
+
+h6 {
+  font-family: 'Karla', sans-serif;
+  color: #5ba7dc;
 }
 
 .content {

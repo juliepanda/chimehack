@@ -14,7 +14,7 @@ window.onload = function() {
       if(validateEmail(email)) {
         console.log('this is a valid email address');
         /* now send valid email to backend */
-        var jsonObj = { 'email': email, 'template': getMailCategoryRadioButton() };
+        var jsonObj = { 'email': email, 'template': getMailCategoryRadioButton(), 'severity': getMailSeverityRadioButton() };
         console.log(jsonObj);
         var post = $.post('/sendmail', jsonObj)
         .done( function(data) {
@@ -36,7 +36,7 @@ window.onload = function() {
       if(validatePhoneNumber(number)) {
         /* send valid number to backend */
         console.log('valid phone number');
-        var jsonObj = { 'number': number , 'template': getTextCategoryRadioButton() };
+        var jsonObj = { 'number': number , 'template': getTextCategoryRadioButton(), 'severity': getTextSeverityRadioButton() };
         console.log(jsonObj);
         var post = $.post('/sendtext', jsonObj)
         .done( function(data) {
@@ -72,16 +72,26 @@ window.onload = function() {
     var compSituation = document.getElementById('mail-compSituation');
     var ignoreSign = document.getElementById('mail-ignoreSign');
     /* get clicked radio value */
-    return getClickedType(rapeJoke, compSituation, ignoreSign);
+    return getCategoryClickedType(rapeJoke, compSituation, ignoreSign);
   }
   function getTextCategoryRadioButton() {
     var rapeJoke = document.getElementById('sms-rapeJoke');
     var compSituation = document.getElementById('sms-compSituation');
     var ignoreSign = document.getElementById('sms-ignoreSign');
     /* get clicked radio value */
-    return getClickedType(rapeJoke, compSituation, ignoreSign);
+    return getCategoryClickedType(rapeJoke, compSituation, ignoreSign);
   }
-  function getClickedType(rapeJoke, compSituation, ignoreSign) {
+  function getMailSeverityRadioButton() {
+    var oops = document.getElementById('mail-oops');
+    var ouch = document.getElementById('mail-ouch');
+    return getSeverityClickedType(oops, ouch);
+  }
+  function getTextSeverityRadioButton() {
+    var oops = document.getElementById('sms-oops');
+    var ouch = document.getElementById('sms-ouch');
+    return getSeverityClickedType(oops, ouch);
+  }
+  function getCategoryClickedType(rapeJoke, compSituation, ignoreSign) {
     var clickedType;
     if (rapeJoke.checked) {
       clickedType = 'rapeJoke';
@@ -93,6 +103,17 @@ window.onload = function() {
       clickedType = null;
     }
     return clickedType;
+  }
+  function getSeverityClickedType(oops, ouch) {
+    var clickedType;
+    if (oops.checked) {
+      clickedType = 'oops';
+    } else if (ouch.checked) {
+      clickedType = 'ouch';
+    } else {
+      clickedType = null;
+    }
+    return clickedType; 
   }
   activateEmailField();
   activateTextField();

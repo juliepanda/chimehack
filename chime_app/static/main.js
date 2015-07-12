@@ -19,6 +19,7 @@ window.onload = function() {
         var post = $.post('/sendmail', jsonObj)
         .done( function(data) {
           console.log(JSON.stringify(data));
+          clearMailForm();
         })
         .fail( function(err) {
           console.log(err);
@@ -40,6 +41,7 @@ window.onload = function() {
         var post = $.post('/sendtext', jsonObj)
         .done( function(data) {
           console.log(JSON.stringify(data));
+          clearTextForm();
         })
         .fail( function(err) {
           console.log(err);
@@ -48,6 +50,14 @@ window.onload = function() {
         console.log('not a valid phone number');
       }
     });
+  }
+  function clearMailForm() {
+    /* clear form after submission*/
+    document.getElementById('mail-form').reset();
+  }
+  function clearTextForm() {
+    /* clear form after submission*/
+  
   }
   function getPhoneNumber() {
     var n1 = document.getElementById('sms-field-1').value;

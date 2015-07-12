@@ -173,6 +173,14 @@ input[type="submit"] {
   background-color: #fff;
 }
 
-.howitworks-icon {
-  width: 200px;
+.howitworks-icon1 {
+  width: 125px;
+}
+
+.howitworks-icon2 {
+  width: 75px;
+}
+
+.howitworks-icon3 {
+  width: 125px;
 }

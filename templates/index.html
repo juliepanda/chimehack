@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>Chimehack</title>
+    <title>Think Twice for Change</title>
     <link rel="stylesheet" href="../static/css/foundation.css" />
     <link rel="stylesheet" href="../static/css/normalize.css">
     <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
@@ -11,8 +11,8 @@
     <script type="text/javascript" src="{{ url_for('static', filename='main.js') }}"></script>
   </head>
   <body>
-    <div class="row">
-      <div class="large-12 columns">
+    <div class="fixed white">
+      <div class="content">
         <a href="#">
             <img class="logo" src="../static/img/logo-1.svg">
         </a> 
@@ -20,10 +20,10 @@
         <nav class="clearfix">
               <ul class="clearfix content">
                   <li><a href="#">About</a></li> 
-                  <li><a href="#">Resources</a></li>
-                  <li><a href="#">Contact</a></li>
-                  <li><a href="#">Link</a></li>
-                  <li><a href="#">Link</a></li>
+                  <li><a href="#">How It Works</a></li>
+                  <li><a href="#">Instructions</a></li>
+                  <li><a href="#">FAQ</a></li>
+                  <li><a href="#">Send a (WORD)</a></li>
               </ul>
               <a href="#" id="pull">
                   <div class="right menu-icon border-icon"></div> 
@@ -43,13 +43,76 @@
         <input type="text" id="sms-field-3" name="sms" maxlength="4">
         <input type="submit" name="submit" class="button" id="sms-submit-btn" value="Submit">
       </fieldset>
-    </div>
-    <div class="section-1-home">
+      <div class="section-1-home">
+        <div class="row">
+          <div class="large-12 columns">
+          <h1>Croissant lemon drops gingerbread.</h1> 
+            <h3>Biscuit gummies chocolate brownie topping jelly pudding chupa chups lemon drops. Ice cream jelly beans candy jelly beans. </h3>
+          </div>
+        </div>
+      </div>
+    
+      <div class="buffer"></div>
+
+      <div class="section-2-about">
+        <div class="row">
+          <div class="large-12 columns">
+          <p>Croissant lemon drops gingerbread. Biscuit gummies chocolate brownie topping jelly pudding chupa chups lemon drops. Ice cream jelly beans candy jelly beans. Macaroon apple pie gingerbread pudding wafer. Powder marzipan apple pie sesame snaps. Candy macaroon cake jujubes. Sweet chocolate marzipan fruitcake caramels. Cookie chocolate bar candy canes. Lemon drops soufflé toffee muffin cheesecake biscuit gingerbread jujubes macaroon. Marshmallow tiramisu tootsie roll pastry. Jujubes tiramisu cotton candy cake macaroon liquorice. Carrot cake tootsie roll pastry chocolate bar. Brownie cotton candy lollipop bonbon donut icing donut.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="buffer"></div>
+
+      <div class="section-3-how">
+        <div class="row">
+          <div class="large-12 columns">
+          <h1>How It Works</h1>
+            <div class="large-4 columns no-pad-left">
+              <img src="http://placehold.it/300x200">
+              <div class="buffer"></div>
+              <p>1. Croissant lemon drops gingerbread. Biscuit gummies chocolate brownie topping jelly pudding chupa chups lemon drops. Ice cream jelly beans candy jelly beans. </p>
+            </div>
+            
+            <div class="large-4 columns no-pad-left">
+              <img src="http://placehold.it/300x200">
+              <div class="buffer"></div>
+              <p>2. Croissant lemon drops gingerbread. Biscuit gummies chocolate brownie topping jelly pudding chupa chups lemon drops. Ice cream jelly beans candy jelly beans. </p>
+            </div>
+            
+            <div class="large-4 columns no-pad-left">
+              <img src="http://placehold.it/300x200">
+              <div class="buffer"></div>
+              <p>3. Croissant lemon drops gingerbread. Biscuit gummies chocolate brownie topping jelly pudding chupa chups lemon drops. Ice cream jelly beans candy jelly beans. </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    <div class="section-4-instructions">
       <div class="row">
-        <div class="large-8 columns">
-      <p>Croissant lemon drops gingerbread. Biscuit gummies chocolate brownie topping jelly pudding chupa chups lemon drops. Ice cream jelly beans candy jelly beans. Macaroon apple pie gingerbread pudding wafer. Powder marzipan apple pie sesame snaps. Candy macaroon cake jujubes. Sweet chocolate marzipan fruitcake caramels. Cookie chocolate bar candy canes. Lemon drops soufflé toffee muffin cheesecake biscuit gingerbread jujubes macaroon. Marshmallow tiramisu tootsie roll pastry. Jujubes tiramisu cotton candy cake macaroon liquorice. Carrot cake tootsie roll pastry chocolate bar. Brownie cotton candy lollipop bonbon donut icing donut.</p>
+        <div class="large-12 columns">
+        <h1>Instructions</h1>
+        <p>Croissant lemon drops gingerbread. Biscuit gummies chocolate brownie topping jelly pudding chupa chups lemon drops. Ice cream jelly beans candy jelly beans. Macaroon apple pie gingerbread pudding wafer. Powder marzipan apple pie sesame snaps. Candy macaroon cake jujubes. Sweet chocolate marzipan fruitcake caramels. Cookie chocolate bar candy canes. Lemon drops soufflé toffee muffin cheesecake biscuit gingerbread jujubes macaroon. Marshmallow tiramisu tootsie roll pastry. Jujubes tiramisu cotton candy cake macaroon liquorice. Carrot cake tootsie roll pastry chocolate bar. Brownie cotton candy lollipop bonbon donut icing donut.</p>
+        </div>
+      </div>
+>>>>>>> c725cee348042bb0688c29b9002b315ee7ef7cb0
+    </div>
+    
+    <div class="section-5-send">
+      <div class="row">
+        <div class="large-12 columns">
+        <h1>Send a (WORD)</h1>
+          <div id="contant-form">
+            <fieldset>
+              <label for="email">Email: </label>
+              <input type="text" id="email-field" name="email" placeholder="Put the offender's email here" size="80">
+              <input type="submit" name="submit" class="button" id="email-submit-btn" value="Submit">
+            </fieldset>
+          </div>
         </div>
       </div>
     </div>
+    
   </body>
 </html>

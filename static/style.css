@@ -1,7 +1,17 @@
 /* FONTS */
 body {
   font-family: 'Open Sans', sans-serif;
+  color: #423f3f;
+}
+
+p {
+  line-height: 34px;
   font-size: 18px;
+}
+
+h1 {
+  color: #fbad18;
+  font-weight: 400;
 }
 
 .content {
@@ -20,61 +30,114 @@ body {
 }
 
 nav {
-    height: 65px;
-    width: 100%;
-    position: relative;
-    border-bottom: 1px solid #eaeaea;
+  height: 65px;
+  width: 100%;
+  position: relative;
+  background: #fff;
 }
  
 nav ul {
-    text-align: right;
-    padding: 0;
-    margin: 0 auto;
-    width: 100%;
-    height: 40px;
-    padding-right: 5%;
-    padding-top: 20px;
+  text-align: right;
+  padding: 0;
+  margin: 0 auto;
+  width: 100%;
+  height: 40px;
+  padding-right: 3%;
+  padding-top: 20px;
 }
  
 nav li { 
-    display: inline;
-    padding-left: 40px;
-    padding-top: 20px;
+  display: inline;
+  padding-left: 40px;
+  padding-top: 20px;
 }
  
-nav a {
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    font-size: 14px;
-    font-weight: 600;
-    color: #f0532d;
-    display: inline-block;
-    text-align: left;
-    text-decoration: none;
+nav a, nav a:focus {
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 600;
+  color: #f0532d;
+  display: inline-block;
+  text-align: left;
+  text-decoration: none;
 }
  
 nav li a {
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
 }
  
 nav a:hover, nav a:active {
-    border-bottom: 2px solid #f0532d;
+  color: #f0532d;
+  border-bottom: 2px solid #f0532d;
 }
  
 nav a#pull {
-    display: none;
+  display: none;
 }
 
 /* SECTIONS */
 
 .section-1-home {
   background-color: #eaeaea;
-  height: 50%;
+  padding: 150px 0px;
+}
+
+.section-2-about {
+  background-color: #fff;
   padding-top: 20px;
+}
+
+.section-3-how {
+  background-color: #eaeaea;
+  padding: 50px 0px;
+}
+
+.section-4-instructions {
+  background-color: #fff;
+  padding: 50px 0px;
+}
+
+.section-5-send {
+  background-color: #eaeaea;
+  padding: 50px 0px;
 }
 
 .buffer {
   padding: 20px;
+}
+
+.no-pad-right {
+  padding-right: 0;
+}
+.no-pad-left{
+  padding-left: 0;
+}
+
+/* BUTTONS */
+
+input[type="submit"] {
+  border-radius: 3px;
+}
+
+.button {
+  background-color: #f0532d;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 14px;
+  padding: 15px 20px;
+}
+
+.button:hover {
+  background-color: #cc2402;
+}
+
+.button:focus {
+  background-color: #cc2402;
+}
+
+.white {
+  background-color: #fff;
 }

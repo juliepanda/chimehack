@@ -5,7 +5,7 @@ def test():
 
 def send(to_email_address, from_email_address, subject, content):
     '''Send email through Sendgrid'''
-    sg = sendgrid.SendGridClient(secrets.get_sendgrid_username(), secrets.get_sendgrid_password())
+    sg = sendgrid.SendGridClient(secrets.get_api_username(), secrets.get_api_password())
     message = sendgrid.Mail()
     message.add_to(to_email_address)
     message.set_from(from_email_address)

@@ -10,7 +10,7 @@ def send(to_email_address, from_email_address, subject, content):
     message.add_to(to_email_address)
     message.set_from(from_email_address)
     message.set_subject(subject)
-    message.set_text(content)
+    message.set_html(content)
 
     status, msg = sg.send(message)
     return {'status': status, 'msg': msg}

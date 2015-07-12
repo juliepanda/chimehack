@@ -344,3 +344,7 @@ input[type="submit"] {
   border-bottom: 3px solid #fdb73f;
   background: transparent;
 }
+
+h5 {
+  font-family: 'Open Sans', sans-serif;
+}

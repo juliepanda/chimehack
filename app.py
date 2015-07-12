@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-import mail, MailContent
+import mail, MailContent, text, TextContent, secrets
 
 app = Flask(__name__)
 
@@ -20,6 +20,15 @@ def send_mail():
         print str(result)
         return to_email_address
 
+@app.route('/sendtext', methods=['POST'])
+def send_text():
+    if request.method == "POST":
+        phone_number_to = request.form['number']
+        # update here to switch templates
+        content = TextContent.test_obj.content
+        #print secrets.get_phone_number_from, phone_number_to, content
+        result = text.send(secrets.get_phone_number_from(), phone_number_to, content)
+        return result
 
 if __name__ == '__main__':
     app.debug = True

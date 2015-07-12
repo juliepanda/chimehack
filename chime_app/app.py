@@ -15,10 +15,9 @@ def send_mail():
         to_email_address = request.form['email']
         category = request.form['template']
         severity = request.form['severity']
-        print severity
         from_email_address = 'julie.yc.pan@gmail.com' # switch out to official email
         # update here to switch templates
-        selected_template = which_MailContent_obj(category)
+        selected_template = which_MailContent_obj(category, severity)
         subject = selected_template.subject
         content = selected_template.content
         result = mail.send(to_email_address, from_email_address, subject, content)
@@ -32,29 +31,44 @@ def send_text():
         category = request.form['template']
         severity = request.form['severity']
         # update here to switch templates
-        print severity
-        selected_template = which_TextContent_obj(category)
+        selected_template = which_TextContent_obj(category, severity)
         content = selected_template.content
         result = text.send(secrets.get_phone_number_from(), phone_number_to, content)
         # result = 'test'
         return result
 
-def which_MailContent_obj(category):
-    if category == 'rapeJoke':
-        return MailContent.template1
-    elif category == 'compSituation':
-        return MailContent.template2
-    elif category == 'ignoreSign':
-        return MailContent.template3
+def which_MailContent_obj(category, severity):
+    if severity == 'oops':
+        if category == 'rapeJoke':
+            return MailContent.template1
+        elif category == 'compSituation':
+            return MailContent.template2
+        elif category == 'ignoreSign':
+            return MailContent.template3
+    elif severity == 'ouch':
+        if category == 'rapeJoke':
+            return MailContent.template4
+        elif category == 'compSituation':
+            return MailContent.template5
+        elif category == 'ignoreSign':
+            return MailContent.template6
     return
 
-def which_TextContent_obj(category):
-    if category == 'rapeJoke':
-        return TextContent.template1
-    elif category == 'compSituation':
-        return TextContent.template2
-    elif category == 'ignoreSign':
-        return TextContent.template3
+def which_TextContent_obj(category, severity):
+    if severity == 'oops':
+        if category == 'rapeJoke':
+            return TextContent.template1
+        elif category == 'compSituation':
+            return TextContent.template2
+        elif category == 'ignoreSign':
+            return TextContent.template3
+    elif severity == 'ouch':
+        if category == 'rapeJoke':
+            return TextContent.template4
+        elif category == 'compSituation':
+            return TextContent.template5
+        elif category == 'ignoreSign':
+            return TextContent.template6
     return
 
 if __name__ == '__main__':

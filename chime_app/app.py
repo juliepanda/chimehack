@@ -31,8 +31,8 @@ def send_text():
         # update here to switch templates
         selected_template = which_TextContent_obj(category)
         content = selected_template.content
-        #print secrets.get_phone_number_from, phone_number_to, content
-        result = text.send(secrets.get_phone_number_from(), phone_number_to, content)
+        #result = text.send(secrets.get_phone_number_from(), phone_number_to, content)
+        result = 'test'
         return result
 
 def which_MailContent_obj(category):

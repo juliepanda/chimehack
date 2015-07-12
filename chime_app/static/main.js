@@ -53,11 +53,12 @@ window.onload = function() {
   }
   function clearMailForm() {
     /* clear form after submission*/
-    document.getElementById('mail-form').reset();
+    //document.getElementById('mail-form').reset();
+    $("#mail-form").load(location.href + " #mail-form");
   }
   function clearTextForm() {
     /* clear form after submission*/
-  
+    $("#text-form").load(location.href + " #text-form");
   }
   function getPhoneNumber() {
     var n1 = document.getElementById('sms-field-1').value;

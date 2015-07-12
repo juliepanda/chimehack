@@ -115,6 +115,7 @@ nav a#pull {
 }
 
 .footer {
+  color: #fff;
   background-color: #f0532d;
   padding: 20px 0px;
 }
@@ -170,4 +171,8 @@ input[type="submit"] {
 
 .white {
   background-color: #fff;
+}
+
+.howitworks-icon {
+  width: 200px;
 }

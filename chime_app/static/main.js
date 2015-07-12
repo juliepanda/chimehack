@@ -58,7 +58,7 @@ window.onload = function() {
   }
   function clearTextForm() {
     /* clear form after submission*/
-    $("#text-form").load(location.href + " #text-form");
+    $("#sms-form").load(location.href + " #sms-form");
   }
   function getPhoneNumber() {
     var n1 = document.getElementById('sms-field-1').value;

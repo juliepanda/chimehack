@@ -19,8 +19,8 @@ def send_mail():
         selected_template = which_MailContent_obj(category)
         subject = selected_template.subject
         content = selected_template.content
-        # result = mail.send(to_email_address, from_email_address, subject, content)
-        # print str(result)
+        result = mail.send(to_email_address, from_email_address, subject, content)
+        print str(result)
         return to_email_address
 
 @app.route('/sendtext', methods=['POST'])
@@ -31,8 +31,7 @@ def send_text():
         # update here to switch templates
         selected_template = which_TextContent_obj(category)
         content = selected_template.content
-        #result = text.send(secrets.get_phone_number_from(), phone_number_to, content)
-        result = 'test'
+        result = text.send(secrets.get_phone_number_from(), phone_number_to, content)
         return result
 
 def which_MailContent_obj(category):

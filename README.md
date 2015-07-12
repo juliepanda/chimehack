@@ -7,6 +7,9 @@ Clone the repo:
 
 You got to install flask to run this.
 ```
+pip install virtualenv
+pip install pymongo
+pip install gunicorn
 pip install Flask
 pip install sendgrid
 ```

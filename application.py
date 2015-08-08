@@ -2,14 +2,14 @@ from flask import Flask, render_template, request
 import mail, MailContent, text, TextContent, secrets
 # from flask.ext.mongoengine import MongoEngine
 
-app = Flask(__name__)
+application = Flask(__name__)
 
-@app.route('/', methods=['GET'])
+@application.route('/', methods=['GET'])
 def index():
     if request.method == "GET":
         return render_template('index.html')
 
-@app.route('/sendmail', methods=['POST'])
+@application.route('/sendmail', methods=['POST'])
 def send_mail():
     if request.method == "POST":
         to_email_address = request.form['email']
@@ -24,7 +24,7 @@ def send_mail():
         print str(result)
         return to_email_address
 
-@app.route('/sendtext', methods=['POST'])
+@application.route('/sendtext', methods=['POST'])
 def send_text():
     if request.method == "POST":
         phone_number_to = request.form['number']
@@ -72,5 +72,5 @@ def which_TextContent_obj(category, severity):
     return
 
 if __name__ == '__main__':
-    app.debug = True
-    app.run()
+    application.debug = False
+    application.run()

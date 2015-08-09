@@ -232,6 +232,7 @@ input[type="submit"] {
   text-transform: uppercase;
   font-size: 14px;
   padding: 15px 20px;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .button:hover {
@@ -240,6 +241,30 @@ input[type="submit"] {
 
 .button:focus {
   background-color: #cc2402;
+}
+
+/* oops ouch */
+
+.form-btn {
+  background-color: #ccc;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 12px;
+  padding: 15px 20px;
+  color: #666;
+  border: 0;
+  font-weight: 600;
+  margin-right: 5px;
+}
+
+.form-btn:hover {
+  background-color: #5ba7dc;
+  color: #fff;
+}
+
+.form-btn:focus {
+  background-color: #5ba7dc;
+  color: #fff;
 }
 
 .fff {
@@ -354,4 +379,8 @@ h5 {
   background-color: #3eb871;
   border-color: transparent;
   color: #FFFFFF;
+}
+
+.alert-box-padding {
+  padding-bottom: 15px;
 }
